@@ -1,0 +1,6 @@
+node_modules
+.vscode
+db.json
+.env
+bun.lock
+package-lock.json
