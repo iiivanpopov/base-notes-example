@@ -16,4 +16,10 @@ Vanilla JS is so uncomfortable...
 2. Create a `library` (smth like mini express) to improve `dx`.
 3. Review `html` and `css` markup, come up with a `good design`.
 
-# This project should work...
+# Showcase
+
+![Register](./showcase/register.png)
+
+![Login](./showcase/login.png)
+
+![Dashboard](./showcase/dashboard.png)
