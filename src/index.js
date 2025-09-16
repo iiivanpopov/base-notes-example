@@ -1,5 +1,6 @@
 import http from "node:http";
 import { config } from "./config.js";
+import { router } from "./module/router.js";
 import { serveStatic } from "./utils/server.js";
 
 http
@@ -7,5 +8,6 @@ http
 		const url = req.url;
 
 		serveStatic(url, res);
+		router(req, res);
 	})
 	.listen(config.port, () => console.log(`Listening localhost:${config.port}`));

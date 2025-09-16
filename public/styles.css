@@ -22,6 +22,10 @@ a {
 	text-decoration: none;
 }
 
+li {
+	list-style: none;
+}
+
 .heading-primary {
 	font-size: 48px;
 	color: var(--foreground-primary);
@@ -226,6 +230,19 @@ a {
 	width: 12rem;
 	background: var(--background-secondary);
 	flex-direction: column;
+
+	> li {
+		padding: 0.5rem;
+		color: var(--foreground-primary);
+		cursor: pointer;
+		transition: background 0.15s ease-in-out;
+	}
+
+	> li.active-note {
+		background: var(--accent);
+		border-radius: 4px;
+		font-weight: bold;
+	}
 }
 
 .notes-list__new:hover {

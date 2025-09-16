@@ -1,3 +1,5 @@
+import { pool } from "./pool.js";
+
 const one = (res) => res.rows[0] || null;
 
 export const createUser = async ({ username, passwordHash, email }) =>

@@ -2,8 +2,8 @@ import assert from "node:assert";
 import test from "node:test";
 import { compare, hash } from "../src/utils/password.js";
 
-test("password module", async (t) => {
-	await t.test("hash should return a string with salt and hash", () => {
+test("password module", (t) => {
+	t.test("hash should return a string with salt and hash", () => {
 		const password = "supersecret";
 		const passwordHash = hash(password);
 
@@ -26,7 +26,7 @@ test("password module", async (t) => {
 		);
 	});
 
-	await t.test("compare should return true for correct password", () => {
+	t.test("compare should return true for correct password", () => {
 		const password = "mypassword123";
 		const passwordHash = hash(password);
 
@@ -34,7 +34,7 @@ test("password module", async (t) => {
 		assert.strictEqual(result, true, "Correct password should match the hash");
 	});
 
-	await t.test("compare should return false for incorrect password", () => {
+	t.test("compare should return false for incorrect password", () => {
 		const password = "mypassword123";
 		const wrongPassword = "wrongpassword";
 		const passwordHash = hash(password);

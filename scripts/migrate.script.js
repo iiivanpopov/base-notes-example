@@ -10,7 +10,7 @@ pool
   );
 `)
 	.catch((error) => {
-		console.error("A migration error occurred");
+		console.error("A migration error occurred.");
 		console.error(error);
 	})
 	.finally(() => {
